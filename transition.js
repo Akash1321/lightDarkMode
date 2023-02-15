@@ -1,4 +1,4 @@
-// const button = document.querySelector(".button");
+const tablet = document.querySelector(".tablet");
 const sunIcon = document.querySelector(".bi-brightness-high");
 const moonIcon = document.querySelector(".bi-moon");
 const sun = document.querySelector(".sun");
@@ -9,7 +9,6 @@ const moonButton = document.querySelector("#moonButton");
 
 function rotateSunIcon(){
 sunIcon.classList.toggle("si");
-// console.log(button);
 }
 
 function rotateMoonIcon(){
@@ -20,7 +19,7 @@ moonIcon.classList.toggle("mi");
 
 
 
-function changeMode(e){
+function changeMode(){
     console.log("working");
     sun.classList.toggle("holders");
     moon.classList.toggle("holders");
@@ -28,7 +27,14 @@ function changeMode(e){
     sunButton.classList.toggle("button");
     moonButton.classList.toggle("button");
 
-    console.log(e);
+    if(sunButton.classList.contains("button")){
+        sunButton.style.backgroundColor = "#272627";
+        tablet.style.background = "linear-gradient( 135deg, #9114FD, #3B08F2)";
+        document.body.style.backgroundColor = `#272627`;
+    } else{
+        tablet.style.background = "linear-gradient( 135deg,#EC86EE, #5BD1FE)";
+        document.body.style.backgroundColor = `#ffffff`;
+    }
     
 }
 
