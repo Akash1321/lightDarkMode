@@ -25,15 +25,22 @@ function changeMode(){
     moon.classList.toggle("holders");
 
     sunButton.classList.toggle("button");
+    sunButton.classList.toggle("moveBlack");
+    
     moonButton.classList.toggle("button");
+    
 
     if(sunButton.classList.contains("button")){
+        
         sunButton.style.backgroundColor = "#272627";
         tablet.style.background = "linear-gradient( 135deg, #9114FD, #3B08F2)";
         document.body.style.backgroundColor = `#272627`;
-    } else{
+        moonButton.classList.remove("moveWhite");
+
+    } else {
         tablet.style.background = "linear-gradient( 135deg,#EC86EE, #5BD1FE)";
         document.body.style.backgroundColor = `#ffffff`;
+        moonButton.classList.add("moveWhite");
     }
     
 }

@@ -41,6 +41,51 @@
     
 }
 
+.moveBlack{
+    animation: bounceRight 2s;
+}
+
+.moveWhite{
+    animation: bounceLeft 2s;
+}
+
+@keyframes bounceRight{
+    0%{
+        transform: translateX(3px);
+    }
+
+    25%{
+        transform: translateX(7px);
+    }
+
+    75%{
+        transform: translateX(-3px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceLeft{
+    0%{
+        transform: translateX(-3px);
+    }
+
+    25%{
+        transform: translateX(-7px);
+    }
+
+    75%{
+        transform: translateX(3px);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
 .button:hover{
     width: 160%;
     border-radius: 70px;
@@ -62,7 +107,7 @@
 
 .mi::before, [class^="mi-"]::before, [class*=" mi-"]::before{
     padding-right: 2px;
-    transform: rotate(10deg) scale(1);
+    transform: rotate(20deg) scale(1);
     transition-duration: 3s;
 }
 
